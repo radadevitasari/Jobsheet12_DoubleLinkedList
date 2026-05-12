@@ -85,31 +85,35 @@ public class DoubleLinkedList19 {
         current = current.prev;
     }
 }
-    public void removeFirst() {
+   public void removeFirst() {
         if (isEmpty()) {
             System.out.println("Linked List kosong.");
             return;
         }
+    System.out.println("Data berhasil dihapus.");
+            head.data.tampil();
+
         if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
             head.prev = null;
         }
-    System.out.println("Data awal berhasil dihapus.");
-}
+    }
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("Linked List kosong.");
             return;
         }
+    System.out.println("Data berhasil dihapus.");
+    tail.data.tampil();
+
         if (head == tail) {
             head = tail = null;
-            } else {
+        } else {
             tail = tail.prev;
             tail.next = null;
         }
-        System.out.println("Data akhir berhasil dihapus.");
     }
 }
 
